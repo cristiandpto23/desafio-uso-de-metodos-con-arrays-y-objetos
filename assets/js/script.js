@@ -29,7 +29,7 @@ let imprimirLista = (lista) => {
     });
     return texto;
 }
-document.write('<h3>Lista pacientes Dental</h3>');
+document.write('<h3 style="margin-top: 25px;">Lista pacientes Dental</h3>');
 document.write(imprimirLista(dental));
 
 
@@ -52,8 +52,33 @@ let imprimirNombres = (lista) => {
     return texto;
 }
 console.log(total)
-document.write('<h3>Lista pacientes</h3>');
+document.write('<h3 style="margin-top: 25px;">Lista de PACIENTES atendidos en el Centro Médico</h3>');
 document.write(imprimirNombres(total));
 
 // Requerimiento CINCO
-//
+// 5. Filtrar pacientes por ISAPRE en la lista de Dental.
+
+let filtrarIsapre = (lista) => {
+    let arregloIsapre = lista.filter((paciente) => paciente.prevision === 'ISAPRE');
+    let texto = '';
+    arregloIsapre.forEach((paciente) => {
+        texto += `<p>${paciente.paciente} - ${paciente.prevision}</p>`;
+    });
+    return texto;
+};
+
+document.write('<h3>Pacientes con ISAPRE en DENTAL</h3>');
+document.write(filtrarIsapre(dental));
+
+// Requerimiento SEIS
+// 6. Filtrar pacientes por FONASA en la lista de Traumatología.
+let filtrarFonasa = (lista) => {
+    let arregloFonasa = lista.filter((paciente) => paciente.prevision === 'FONASA');
+    let texto = '';
+    arregloFonasa.forEach((paciente) => {
+        texto += `<p>${paciente.paciente} - ${paciente.prevision}</p>`;
+    });
+    return texto;
+};
+document.write('<h3>Pacientes con FONASA en TRAUMATOLOGÍA</h3>');
+document.write(filtrarFonasa(traumatologia));
