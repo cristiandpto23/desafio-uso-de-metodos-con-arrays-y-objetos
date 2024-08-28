@@ -28,6 +28,10 @@ var dental = [
 ];
 
 //Agregar código para el desafio 2 aquí
+
+// Requerimiento UNO
+
+// 1. Agregar las siguientes horas al arreglo de Traumatología:
 let nuevasTraumatologia = (traumatologia.push(
     { hora: '09:00', especialista: 'RENÉ POBLETE', paciente: 'ANA GELLONA', rut: '13123329-7', prevision: 'ISAPRE' },
     { hora: '09:30', especialista: 'MARIA SOLAR', paciente: 'RAMIRO ANDRADE', rut: '12221451-K', prevision: 'FONASA' },
@@ -36,10 +40,13 @@ let nuevasTraumatologia = (traumatologia.push(
     { hora: '12:00', especialista: 'MATIAS ARAVENA', paciente: 'SUSANA POBLETE', rut: '14345656-6', prevision: 'FONASA' },
 ));
 console.table(traumatologia);
+// 1.1. Ordenar el arreglo de Traumatología de forma creciente por hora.
 traumatologia.sort((a, b) => (parseInt(a.hora.split(':').join('')) > parseInt(b.hora.split(':').join(''))) ? 1 : -1);
-
-//  
 console.table(traumatologia);
+
+// Requerimiento DOS
+
+
 
 
 //Agregar código para el desafio 2 aquí
