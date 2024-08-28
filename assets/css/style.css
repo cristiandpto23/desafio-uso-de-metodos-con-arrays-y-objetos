@@ -4,8 +4,12 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body {
+    width: 80%;
+    margin: 0 auto;
+}
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #333;
     margin: 1.2rem 0 0.8rem;
@@ -15,4 +19,12 @@ h3 {
 hr {
     border-top: 2px dotted gray;
     margin-bottom: 1.2rem;
+}
+
+p:first-of-type {
+    padding-top: 1.6rem;
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
 }
